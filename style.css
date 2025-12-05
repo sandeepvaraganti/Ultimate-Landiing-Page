@@ -1,0 +1,161 @@
+/* Custom CSS for TechSolutions Inc. */
+
+/* Variables */
+:root {
+    --primary-color: #4a6bff;
+    --secondary-color: #6c757d;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-color);
+    padding-top: 76px; /* For fixed navbar */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+}
+
+/* Service Cards */
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: var(--transition);
+    height: 100%;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.service-icon {
+    color: var(--primary-color);
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-link {
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Stats Box */
+.stats-box {
+    background: white;
+}
+
+.stats-box h3 {
+    font-size: 2.5rem;
+}
+
+/* Contact Form */
+.contact-form {
+    background: white;
+}
+
+.contact-form .form-control {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    transition: var(--transition);
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(74, 107, 255, 0.25);
+}
+
+/* Footer */
+footer a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+footer a:hover {
+    color: white !important;
+    padding-left: 5px;
+}
+
+/* Section Padding */
+.section-padding {
+    padding: 80px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 40px 0;
+    }
+    
+    .section-padding {
+        padding: 50px 0;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    h1.display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Animation for sections */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.8s ease forwards;
+}
